@@ -1,10 +1,27 @@
 {{> head }}
 
-<div class="S-flex-row">
-  {{> tools/sidebar }}
-  {{> contentWrapperStart }}
-  {{> contentWrapperEnd }}
+<div class="so-back">
+  <div class="so-chunk">
+    <div class="so-siteHeader">
+      {{> siteLogo }}
+      <div class="networkPicker">
+        <div class="networkPicker">
+          Network:
+          <a href="" class="s-button networkPicker__button">Live</a>
+          <a href="" class="s-button networkPicker__button">Test</a>
+        </div>
+        <span class="networkPicker__url">https://horizon.stellar.org/</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="so-back siteNavBack">
+  <div class="so-chunk">
+    <nav class="s-navList js-endpointRef-menu">
+      <a href="#" class="s-navList__item is-active">Endpoint Explorer</a>
+      <a class="s-navList__item">More coming soon</a>
+    </nav>
+  </div>
 </div>
 
-{{> footer }}
 {{> foot }}

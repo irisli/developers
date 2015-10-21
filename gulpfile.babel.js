@@ -21,10 +21,10 @@ gulp.task("default", ["build"]);
 
 gulp.task('src:symlink-repos', ['git:clone'], () => {
   // symlink the landing pages/custom content from the docs repo for each section
-  safeSymlink("../repos/docs/learn", "src/learn")
-  safeSymlink("../repos/docs/reference", "src/reference")
-  safeSymlink("../repos/docs/tools", "src/tools")
-  safeSymlink("../repos/docs/beyond-code", "src/beyond-code")
+  // safeSymlink("../repos/docs/learn", "src/learn")
+  // safeSymlink("../repos/docs/reference", "src/reference")
+  // safeSymlink("../repos/docs/tools", "src/tools")
+  // safeSymlink("../repos/docs/beyond-code", "src/beyond-code")
 
   // link up other repo's docs folder into the src structure
   return gulp.src("./repos/*/docs/")
@@ -88,14 +88,14 @@ gulp.task('build', ['src:symlink-repos', "js:copy-vendor", 'css:symlink-graphics
         "js/app.js",
       ]
     }))
-    .use(renameReadme)
-    .use($m.markdown())
+    // .use(renameReadme)
+    // .use($m.markdown())
     .use($m.inPlace(_.extend({}, templateOptions, {
       pattern: '*.handlebars'
     })))
     .use(renameHandlebars)
     .use($m.layouts(templateOptions))
-    .use(links.rewrite)
+    // .use(links.rewrite)
 
     .build(done);
 });

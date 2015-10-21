@@ -7,31 +7,36 @@
 @import 'solar-stellarorg-pages/styles/index';
 
 @import 'friendbot4';
-@import 'mailSignup';
 
-
-// site wide above the content, the title in the sidebar and above the body
-.mainSectionTitle {
-  padding-top: 1em;
-  padding-bottom: 1em;
-  font-size: $s-scale-2;
-  color: $s-color-neutral2;
-}
-.mainSidebar {
+.siteNavBack {
   border-top: 1px solid $s-color-neutral7;
-  padding-top: 2em;
-}
-.mainContent {
-  max-width: 900px;
-}
-
-// gray sidebar on full width pages
-.siteSidebar {
-  @include S-flexItem-noFlex;
-  width: 288px;
-  padding-left: 2em;
+  border-bottom: 1px solid $s-color-neutral7;
+  padding: 1.5em 0;
   background: $s-color-neutral8;
 }
+
+
+.playgroundHeader {
+  justify-content: space-between;
+}
+
+.networkPicker {
+  position: relative;
+  align-self: flex-start;
+}
+.networkPicker__button {
+  font-size: $s-scale-5;
+  padding: 0.2em 1.5em;
+}
+.networkPicker__url {
+  position: absolute;
+  bottom: -26px;
+  right: 0;
+  white-space: nowrap;
+  font-size: $s-scale-5;
+  color: $s-color-neutral4;
+}
+
 
 // syntaxHighlight (.codeBlock is added automatically by syntaxHighlight.js)
 @import 'codemirror/theme/monokai';
@@ -43,133 +48,4 @@
 }
 s-read-md .codeBlock {
   padding: 1em;
-}
-
-
-// API reference sidebar
-// Due to a bug in sass, 1.5*$s-scale-4 does not work. Instead, we just do 18*1.5 + px = 27px
-.endpointRef-exampleBar {
-  display: none;
-  padding: 2em 27px 0 27px;
-}
-.endpointRef-exampleBar.is-available {
-  display: block;
-  @include S-flexItem-full;
-}
-@include r-media(3xl) {
-  .endpointRef-exampleBar.is-available {
-    @include S-flexItem-share;
-  }
-}
-.endpointRef-exampleBar .codeBlock {
-  margin-left: -27px;
-  margin-right: -27px;
-  padding-left: 27px;
-  padding-right: 27px;
-}
-.endpointRef-exampleRequest:before, .endpointRef-exampleResponse:before {
-  display: block;
-  color: $s-color-neutral7;
-  font-size: $s-scale-5;
-}
-.endpointRef-exampleRequest:before {
-  content: 'Example Request';
-}
-.endpointRef-exampleResponse:before {
-  content: 'Example Response';
-}
-.endpointRef-exampleResponse pre:last-of-type {
-  margin-bottom: 0;
-}
-
-.pageNavList {
-  list-style: none;
-}
-.pageNavList ul {
-  padding-left: 1em;
-  list-style: none;
-}
-.pageNavList ul ul {
-  padding-left: 1em;
-}
-.pageNavList > ul:first-child {
-  margin-top: 0;
-}
-.pageNavList__title {
-  font-weight: 700;
-}
-.pageNavList__item a {
-  display: block;
-  border-right: 0.4em solid transparent;
-  color: $s-color-primary2;
-  text-decoration: none;
-}
-.pageNavList__item.is-currentItem a {
-  color: $s-color-neutral3;
-  border-color: $s-color-neutral3;
-}
-.pageNavList__item a:hover {
-  color: $s-color-primary1;
-  text-decoration: underline;
-}
-.pageNavList__subList {
-  margin-top: 0.5em;
-}
-.pageNavList > .pageNavList__subList:first-child {
-  margin-top: 0;
-}
-
-
-// variable size flexible columns with different responsive options
-.flexCols {
-  @include S-flex-rowWrap;
-}
-  .flexCols__col {
-    @include S-flexItem-full;
-  }
-  // in theory, one is supposed to use utilities to style the color
-  .flexCols__col--borderBetween {
-    border-bottom: 1px solid transparent;
-  }
-  .flexCols__col--borderBetween:last-child {
-    border-bottom: none;
-  }
-
-@include r-media(l) {
-  .flexCols--l {
-  }
-    .flexCols--l__col {
-      @include S-flexItem-share;
-    }
-    .flexCols--l__col--borderBetween {
-      border-bottom: none;
-      border-right: 1px solid transparent;
-    }
-    .flexCols--l__col--borderBetween:last-child {
-      border-right: none;
-    }
-}
-
-// Used to align the three landing page images together
-.landingColsImage {
-  min-height: 260px;
-}
-
-
-.centerText {
-  text-align: center;
-}
-
-
-// solar stuff incubated here. Will be moved into solar when needed
-.so-capTitle {
-  text-transform: uppercase;
-  font-size: $s-scale-5;
-  margin-bottom: 0.5em;
-}
-
-// Testing
-.linkCheck-emptyLink:after {
-  content: '*';
-  color: red;
 }

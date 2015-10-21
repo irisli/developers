@@ -1,97 +1,36 @@
 ---
 title: Developers
 ---
-{{> head}}
+{{> head }}
 
 <div class="so-back">
   <div class="so-chunk">
-    <div class="so-siteHeader">
+    <div class="so-siteHeader playgroundHeader">
       {{> siteLogo }}
-        <nav class="s-inlineList s-inlineList--wide so-siteHeader__navList spu-padStart-30 so-siteHeader__simpleAlign">
-          {{> mainNavMenu }}
-        </nav>
+      <div class="networkPicker">
+        <form class="s-buttonGroup">
+          <label class="s-buttonGroup__wrapper">
+            <input type="radio" class="s-buttonGroup__radio" name="favorite-letter" value="live">
+            <span class="s-button s-button__light networkPicker__button">live</span>
+          </label>
+          <label class="s-buttonGroup__wrapper">
+            <input type="radio" class="s-buttonGroup__radio" name="favorite-letter" value="test" checked>
+            <span class="s-button s-button__light networkPicker__button">test</span>
+          </label>
+        </form>
+        <span class="networkPicker__url">horizon-testnet.stellar.org</span>
+      </div>
     </div>
   </div>
+</div>
+<div class="so-back siteNavBack">
   <div class="so-chunk">
-    <div class="flexCols flexCols--l flexCols--twinBorder spu-background-primary8 spu-radius">
-      <a href="{{pathPrefix}}/learn/" class="flexCols__col flexCols--l__col flexCols__col--borderBetween flexCols--l__col--borderBetween spu-borderColor-neutral9 spu-pad-20 spu-padSE-30 centerText spu-textDecorationNone">
-        <p class="so-capTitle">Basics</p>
-        <h3>Learn Stellar concepts</h3>
-        <div class="spu-padTB-30 landingColsImage">
-          <span class="so-graphic-pencilOnEarth"></span>
-        </div>
-        <p class="spu-fontSize-5">Get to know the ABCs of the Stellar network.</p>
-      </a>
-      <a href="{{pathPrefix}}/reference/" class="flexCols__col flexCols--l__col flexCols__col--borderBetween flexCols--l__col--borderBetween spu-borderColor-neutral9 spu-pad-20 spu-padSE-30 centerText spu-textDecorationNone">
-        <p class="so-capTitle">Documentation</p>
-        <h3>Explore the ecosystem</h3>
-        <div class="spu-padTB-30 landingColsImage">
-          <span class="so-graphic-codeWithOrbits"></span>
-        </div>
-        <p class="spu-fontSize-5">All the reference you need to build Stellar applications.</p>
-      </a>
-      <a href="{{pathPrefix}}/beyond-code/" class="flexCols__col flexCols--l__col flexCols__col--borderBetween flexCols--l__col--borderBetween spu-borderColor-neutral9 spu-pad-20 spu-padSE-30 centerText spu-textDecorationNone">
-        <p class="so-capTitle">Community</p>
-        <h3>Join the movement</h3>
-        <div class="spu-padTB-30 landingColsImage">
-          <span class="so-graphic-nodeConnectedEarth"></span>
-        </div>
-        <p class="spu-fontSize-5">Ask questions, meet developers, and contribute more than code.</p>
-      </a>
-    </div>
+    <nav class="s-buttonList">
+      <a href="#" class="s-buttonList__item s-button s-button__min is-active">Endpoint Explorer</a>
+      <a class="s-buttonList__item s-button s-button__min">More coming soon</a>
+      <a class="s-buttonList__item s-button s-button__min is-disabled">More coming soon</a>
+    </nav>
   </div>
 </div>
 
-<div class="so-back spu-padTB-20">
-  <div class="so-chunk spu-background-neutral3 spu-radius spu-pad-20">
-    <h3 class="spu-color-neutral8 spu-centerText spu-padBottom-10">Quick Start</h3>
-    <div class="spu-background-neutral2 spu-radius spu-color-neutral8">
-      {{> modules/friendbot4}}
-    </div>
-  </div>
-</div>
-
-<div class="so-back spu-background-neutral8">
-  <div class="so-chunk spu-padTop-30 spu-maxWidth-40">
-    <div class="so-col-3 spu-padBottom-25">
-      <div class="spu-padBottom-15">
-        <span class="so-graphic-s-fileFolder"></span>
-      </div>
-      <h4 class="spu-padBottom-10">Quick Links</h4>
-      <ul class="so-linkList">
-        <li class="so-linkList__item"><a href="https://github.com/stellar">GitHub</a></li>
-        <li class="so-linkList__item"><a href="https://bitcoin.stackexchange.com/questions/tagged/stellar">Stack Overflow</a></li>
-        <li class="so-linkList__item"><a href="{{pathPrefix}}/stellar-core/learn/admin.html">Run a node</a></li>
-      </ul>
-    </div>
-    <div class="so-col-3 spu-padBottom-25">
-      <div class="spu-padBottom-15">
-        <span class="so-graphic-s-rectangularTree"></span>
-      </div>
-      <h4 class="spu-padBottom-10">Community</h4>
-      <ul class="so-linkList">
-        <li class="so-linkList__item"><a href="http://slack.stellar.org">Slack</a></li>
-        <li class="so-linkList__item"><a href="https://www.stellar.org/blog/">Blog</a></li>
-        <li class="so-linkList__item"><a href="{{pathPrefix}}/beyond-code/">Contribute</a></li>
-      </ul>
-    </div>
-    <div class="so-col-3 spu-padBottom-25">
-      <div class="spu-padBottom-15">
-        <span class="so-graphic-s-bigCogLittleCog"></span>
-      </div>
-      <h4 class="spu-padBottom-10">About Stellar</h4>
-      <ul class="so-linkList">
-        <li class="so-linkList__item"><a href="https://www.stellar.org/">Stellar.org</a></li>
-        <li class="so-linkList__item"><a href="https://www.stellar.org/about/mandate/">Mission</a></li>
-        <li class="so-linkList__item"><a href="https://www.stellar.org/jobs/">Work with us</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="so-back spu-background-primary8">
-  <div class="so-chunk spu-padTB-15 spu-maxWidth-40">
-    {{> modules/dev-newsletter}}
-  </div>
-</div>
-
-{{> foot}}
+{{> foot }}
