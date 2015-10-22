@@ -33,4 +33,101 @@ title: Developers
   </div>
 </div>
 
+<div class="so-back">
+  <div class="so-chunk endpointExplorer">
+    <div class="endpointExplorer__picker">
+      <div class="endpointPicker">
+        <div class="endpointPicker__section">
+          <p class="endpointPicker__section__title">1. Select a resource</p>
+          <nav class="s-buttonGroup s-buttonGroup--vertical">
+            <a href="#" class="s-button s-button__light is-active">Accounts</a>
+            <a class="s-button s-button__light">Operations</a>
+            <a class="s-button s-button__light">Transactions</a>
+          </nav>
+        </div>
+        <div class="endpointPicker__section">
+          <p class="endpointPicker__section__title">2. Select an endpoint</p>
+          <nav class="s-buttonGroup s-buttonGroup--vertical">
+            <a href="#" class="s-button s-button__light is-active">All Accounts</a>
+            <a class="s-button s-button__light">Account Details</a>
+            <a class="s-button s-button__light">Accounts for ledger</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="so-chunk endpointSetup">
+      <div class="optionTable">
+        <div class="optionTable__pair">
+          <div class="optionTable__pair__title">
+            Account ID
+          </div>
+          <div class="optionTable__pair__content">
+            <input type="text" name="accountID">
+          </div>
+        </div>
+        <div class="optionTable__pair">
+          <div class="optionTable__pair__title">
+            Limit
+          </div>
+          <label class="optionTable__pair__content">
+            <input type="text" name="limit">
+          </label>
+        </div>
+        <div class="optionTable__pair">
+          <div class="optionTable__pair__title">
+            Order
+          </div>
+          <div class="optionTable__pair__content">
+            <div class="s-buttonGroup">
+              <label class="s-buttonGroup__wrapper">
+                <input type="radio" class="s-buttonGroup__radio" name="order-1" value="default">
+                <span class="s-button s-button__light">default (asc)</span>
+              </label>
+              <label class="s-buttonGroup__wrapper">
+                <input type="radio" class="s-buttonGroup__radio" name="order-1" value="asc">
+                <span class="s-button s-button__light">asc</span>
+              </label>
+              <label class="s-buttonGroup__wrapper">
+                <input type="radio" class="s-buttonGroup__radio" name="order-1" value="desc" checked>
+                <span class="s-button s-button__light">desc</span>
+              </label>
+            </div>
+            <p class="optionTable__pair__content__note">
+              Default is 10.
+            </p>
+            <p class="optionTable__pair__content__alert">
+              Dat aint a numbah
+            </p>
+          </div>
+        </div>
+        <div class="optionTable__pair">
+          <div class="optionTable__pair__title">
+            Streaming
+          </div>
+          <div class="optionTable__pair__content">
+            <div class="s-buttonGroup">
+              <label class="s-buttonGroup__wrapper">
+                <input type="radio" class="s-buttonGroup__radio" name="streaming-2" value="enable">
+                <span class="s-button s-button__light">enable</span>
+              </label>
+              <label class="s-buttonGroup__wrapper">
+                <input type="radio" class="s-buttonGroup__radio" name="streaming-2" value="disable" checked>
+                <span class="s-button s-button__light">disable</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <hr class="optionTable__separator">
+        <div class="optionTable__blank">
+          <span>https://horizon-testnet.stellar.org/accounts/GA2HGBJIJKI6O4XEM7CZWY5PS6GKSXL6D34ERAJYQSPYA6X6AI7HYW36/operations</span>
+        </div>
+        <div class="optionTable__blank">
+          <button class="s-button">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {{> foot }}

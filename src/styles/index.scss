@@ -11,10 +11,10 @@
 .siteNavBack {
   border-top: 1px solid $s-color-neutral7;
   border-bottom: 1px solid $s-color-neutral7;
-  padding: 1.5em 0;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   background: $s-color-neutral8;
 }
-
 
 .playgroundHeader {
   justify-content: space-between;
@@ -34,8 +34,94 @@
   right: 0;
   white-space: nowrap;
   font-size: $s-scale-5;
-  color: $s-color-neutral4;
+  color: $s-color-neutral3;
 }
+
+.endpointExplorer {
+  padding-top: 1em;
+}
+.endpointExplorer__picker {
+  margin-bottom: 2em;
+}
+.endpointPicker__section {
+  margin-bottom: 2em;
+}
+.endpointPicker__section:last-child {
+  margin-bottom: 0;
+}
+.endpointPicker__section__title {
+  font-size: $s-scale-3;
+  margin: 0 1.5em .25em 1.5em;
+}
+@include r-media(l) {
+  .endpointPicker {
+    @include S-flex-row;
+  }
+  .endpointPicker__section {
+    @include S-flexItem-noFlex;
+    margin-right: 2em;
+    margin-bottom: 0;
+  }
+  .endpointPicker__section:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.optionTable {
+  border: 1px solid $s-color-neutral6;
+  border-radius: $s-var-radius;
+}
+  .optionTable__pair, .optionTable__separator, .optionTable__blank {
+    width: 100%;
+  }
+  .optionTable__pair, .optionTable__blank {
+    border-bottom: 1px solid $s-color-neutral6;
+  }
+  .optionTable__pair:last-child, .optionTable__blank:last-child {
+    border-bottom: none;
+  }
+  .optionTable__separator, .optionTable__blank {
+    @include S-flexItem-full;
+  }
+  .optionTable__pair {
+    @include S-flex-row;
+    border-bottom: 1px solid $s-color-neutral6;
+  }
+  .optionTable__pair:nth-child(even) {
+    background: $s-color-neutral8;
+  }
+  .optionTable__pair:hover {
+    background: $s-color-primary9;
+  }
+  .optionTable__pair__title {
+    @include S-flexItem-1of6;
+    border-right: 1px solid $s-color-neutral6;
+    padding: 1.1em 1em 0.5em 1em;
+  }
+  .optionTable__pair__content {
+    @include S-flexItem-5of6;
+    padding: 0.75em 1em;
+  }
+
+    .optionTable__pair__content__note {
+      margin: 0.75em 0 0 0;
+      color: $s-color-neutral3;
+    }
+    .optionTable__pair__content__alert {
+      margin: 0.75em 0 0 0;
+      color: $s-color-alert;
+    }
+  .optionTable__blank {
+    padding: 0.75em 1em;
+  }
+  .optionTable__separator {
+    height: 1px;
+    margin: 0;
+    border: 0;
+    background: $s-color-neutral6;
+  }
+
 
 
 // syntaxHighlight (.codeBlock is added automatically by syntaxHighlight.js)
